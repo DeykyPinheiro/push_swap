@@ -3,6 +3,7 @@ NAME	=	push_swap
 #PATHS
 LIBFT_PATH = ./libraries/libft
 RULES_PATH = ./libraries/rules
+STACK_PATH = ./libraries/stack
 
 CC		=	clang
 CFLAGS	= -Wall -Werror -Wextra -g
@@ -24,7 +25,8 @@ $(OBJ_DIR):
 $(NAME):	$(OBJ_DIR) $(OBJ)
 			$(MAKE) -C $(LIBFT_PATH)
 			$(MAKE) -C $(RULES_PATH)
-			$(CC) $(CFLAGS) $(OBJ) $(LIBFT_PATH)/libft.a $(RULES_PATH)/rules.a -o $(NAME)
+			$(MAKE) -C $(STACK_PATH)
+			$(CC) $(CFLAGS) $(OBJ) $(LIBFT_PATH)/libft.a $(RULES_PATH)/rules.a $(STACK_PATH)/stack.a -o $(NAME)
 
 $(OBJ_DIR)/%.o: $(SRC_DIR)/%.c
 	$(CC) -c $(CFLAGS) $< -o $@
@@ -33,11 +35,14 @@ clean:
 			$(RM) $(OBJ_DIR)
 			$(MAKE) -C $(LIBFT_PATH) clean
 			$(MAKE) -C $(RULES_PATH) clean
+			$(MAKE) -C $(STACK_PATH) clean
+
 
 fclean:		clean
 			$(RM) $(NAME)
 			$(MAKE) -C $(LIBFT_PATH) fclean
 			$(MAKE) -C $(RULES_PATH) fclean
+			$(MAKE) -C $(STACK_PATH) fclean
 
 re:			fclean all
 
@@ -45,7 +50,8 @@ n:
 		clear
 		norminette ./libraries ./src
 
-r:
+r:		all
+		clear
 		./$(NAME)
 
 .PHONY: all clean fclean re

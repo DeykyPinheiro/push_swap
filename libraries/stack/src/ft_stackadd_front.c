@@ -1,19 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_bzero.c                                         :+:      :+:    :+:   */
+/*   ft_stackadd_front.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: demikael <pinheiromikael96@gmail.com>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/08/14 22:26:27 by demikael          #+#    #+#             */
-/*   Updated: 2022/04/09 15:00:15 by demikael         ###   ########.fr       */
+/*   Created: 2022/04/09 16:24:19 by demikael          #+#    #+#             */
+/*   Updated: 2022/04/09 16:26:42 by demikael         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "stack.h"
 
-void	ft_bzero(void *s, size_t n)
+void	ft_stackadd_front(t_stack **lst, t_stack *new)
 {
-	while (n--)
-		*(char *)s++ = 0;
+	if (!lst || !new)
+		return ;
+	new->next = *lst;
+	*lst = new;
 }

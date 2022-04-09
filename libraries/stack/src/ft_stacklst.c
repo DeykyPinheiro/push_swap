@@ -1,19 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_bzero.c                                         :+:      :+:    :+:   */
+/*   ft_stacklst.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: demikael <pinheiromikael96@gmail.com>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/08/14 22:26:27 by demikael          #+#    #+#             */
-/*   Updated: 2022/04/09 15:00:15 by demikael         ###   ########.fr       */
+/*   Created: 2022/04/09 16:12:37 by demikael          #+#    #+#             */
+/*   Updated: 2022/04/09 16:52:49 by demikael         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "stack.h"
 
-void	ft_bzero(void *s, size_t n)
+t_stack	*ft_stacklst(t_stack *lst)
 {
-	while (n--)
-		*(char *)s++ = 0;
+	if (!lst)
+		return (NULL);
+	while(lst->next)
+		lst = lst->next;
+	return (lst);
 }
