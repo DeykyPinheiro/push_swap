@@ -14,6 +14,7 @@ OBJ_DIR	= ./obj
 SRC_DIR	= ./src
 
 SRC = ft_stackadd_back.c ft_stackadd_front.c ft_stacklst.c ft_stacknew.c
+SRC += ft_stackrm_front.c ft_stackrm_back.c
 
 OBJ	= $(addprefix $(OBJ_DIR)/, $(SRC:.c=.o))
 
