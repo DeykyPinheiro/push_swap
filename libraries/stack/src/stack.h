@@ -6,7 +6,7 @@
 /*   By: demikael <pinheiromikael96@gmail.com>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/07 18:53:37 by demikael          #+#    #+#             */
-/*   Updated: 2022/04/10 13:45:16 by demikael         ###   ########.fr       */
+/*   Updated: 2022/04/10 18:09:10 by demikael         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 #define STACK_H
 
 # include <stdlib.h>
+#include <stdio.h>
 
 typedef struct s_stack
 {

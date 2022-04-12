@@ -6,7 +6,14 @@
 /*   By: demikael <pinheiromikael96@gmail.com>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/05 19:28:34 by demikael          #+#    #+#             */
-/*   Updated: 2022/04/05 19:28:37 by demikael         ###   ########.fr       */
+/*   Updated: 2022/04/12 01:00:06 by demikael         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "rules.h"
+
+void	ss(t_data *data)
+{
+	sa(data);
+	sb(data);
+}

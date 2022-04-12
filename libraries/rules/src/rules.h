@@ -6,22 +6,32 @@
 /*   By: demikael <pinheiromikael96@gmail.com>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/05 19:29:39 by demikael          #+#    #+#             */
-/*   Updated: 2022/04/05 19:38:32 by demikael         ###   ########.fr       */
+/*   Updated: 2022/04/12 10:02:06 by demikael         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef RULES_H
 #define RULES_H
 
-// typedef struct s_stack
-// {
-// 	struct s_stack	*prev;
-// 	struct s_stack	*next;
-// 	int				content;
-// 	int				index;
-// }	t_stack;
+#include "../../stack/src/stack.h"
+
+typedef struct s_data
+{
+	t_stack *stack_a;
+	t_stack *stack_b;
+}	t_data;
 
 
-
+void	sa(t_data *data);
+void	ra(t_data *data);
+void	pb(t_data *data);
+void	sb(t_data *data);
+void	ss(t_data *data);
+void	pa(t_data *data);
+void	rb(t_data *data);
+void	rr(t_data *data);
+void	rra(t_data *data);
+void	rrb(t_data *data);
+void	rrr(t_data *data);
 
 #endif
