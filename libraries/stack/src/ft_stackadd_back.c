@@ -6,7 +6,7 @@
 /*   By: demikael <pinheiromikael96@gmail.com>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/09 15:15:19 by demikael          #+#    #+#             */
-/*   Updated: 2022/04/12 10:08:10 by demikael         ###   ########.fr       */
+/*   Updated: 2022/04/12 10:20:49 by demikael         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ void	ft_stackadd_back(t_stack **lst, t_stack *new)
 	// printf("entrei\n"); //tem dois prints pra apagar
 	// printf("%d ", !lst);
 	// printf("%d\n", !new);
-	if (!lst || !new)
+	if (!new)
 		return ;
 	if (*lst == NULL)
 		*lst = new;
@@ -28,5 +28,6 @@ void	ft_stackadd_back(t_stack **lst, t_stack *new)
 		last = ft_stacklst(*lst);
 		last->next = new;
 		new->prev = last;
+		new->next = NULL;
 	}
 }

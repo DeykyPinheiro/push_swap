@@ -6,7 +6,7 @@
 /*   By: demikael <pinheiromikael96@gmail.com>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/05 19:28:28 by demikael          #+#    #+#             */
-/*   Updated: 2022/04/12 01:09:00 by demikael         ###   ########.fr       */
+/*   Updated: 2022/04/12 22:45:26 by demikael         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,11 +14,19 @@
 
 void	pa(t_data *data)
 {
-	int aux;
-	// printf("stackANaoExiste: %d\n", !data->stack_a);
-	// printf("stackBNaoExiste: %d\n", !data->stack_b);
+	int i;
 
-	aux = data->stack_b->content;
-	ft_stackrm_front(&data->stack_b);
-	ft_stackadd_front(&data->stack_a, ft_stacknew(aux));
+	if (data->stack_b)
+	{
+		i = data->stack_b->content;
+		if (data->stack_b->next)
+		{
+			data->stack_b = data->stack_b->next;
+			data->stack_b->prev = NULL;
+		}
+		else
+			data->stack_b = NULL;
+		ft_stackadd_front(&data->stack_a, ft_stacknew(i));
+	}
+	write(1, "pa\n", 3);
 }

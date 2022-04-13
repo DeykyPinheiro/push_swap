@@ -1,22 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_stacklst.c                                      :+:      :+:    :+:   */
+/*   ft_stacksize.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: demikael <pinheiromikael96@gmail.com>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/04/09 16:12:37 by demikael          #+#    #+#             */
-/*   Updated: 2022/04/12 22:09:59 by demikael         ###   ########.fr       */
+/*   Created: 2022/04/12 19:39:20 by demikael          #+#    #+#             */
+/*   Updated: 2022/04/12 19:53:58 by demikael         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "stack.h"
 
-t_stack	*ft_stacklst(t_stack *lst)
+int	ft_stacksize(t_stack *lst)
 {
+	t_stack	*aux;
+	int		i;
+
 	if (!lst)
-		return (NULL);
-	while(lst->next)
-		lst = lst->next;
-	return (lst);
+		return (0);
+	i = 0;
+	aux = lst;
+	while (aux)
+	{
+		aux = aux->next;
+		i++;
+	}
+	return (i);
 }

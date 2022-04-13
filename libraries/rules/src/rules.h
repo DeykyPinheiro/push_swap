@@ -6,7 +6,7 @@
 /*   By: demikael <pinheiromikael96@gmail.com>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/05 19:29:39 by demikael          #+#    #+#             */
-/*   Updated: 2022/04/12 10:02:06 by demikael         ###   ########.fr       */
+/*   Updated: 2022/04/12 23:05:38 by demikael         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,8 @@
 #define RULES_H
 
 #include "../../stack/src/stack.h"
+#include <stdio.h>
+#include <unistd.h>
 
 typedef struct s_data
 {
