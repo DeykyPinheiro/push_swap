@@ -6,7 +6,7 @@
 /*   By: demikael <pinheiromikael96@gmail.com>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/05 19:29:57 by demikael          #+#    #+#             */
-/*   Updated: 2022/04/10 17:29:13 by demikael         ###   ########.fr       */
+/*   Updated: 2022/04/13 14:27:11 by demikael         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,6 @@
 #include "../libraries/stack/src/stack.h"
 #include "../libraries/rules/src/rules.h"
 
-
+void normalize(t_data *data);
 
 #endif

@@ -6,7 +6,7 @@
 /*   By: demikael <pinheiromikael96@gmail.com>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/10 16:07:05 by demikael          #+#    #+#             */
-/*   Updated: 2022/04/12 23:07:20 by demikael         ###   ########.fr       */
+/*   Updated: 2022/04/13 14:30:08 by demikael         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,14 +28,21 @@ void	init_stack(t_data *data, char *argv[])
 	int		i;
 
 	i = 0;
+	data->stack_a = NULL;
+	data->stack_b = NULL;
+	data->copy = NULL;
 	while (argv[++i])
 	{
 		tmp = ft_stacknew(ft_atoi(argv[i]));
 		ft_stackadd_back(&data->stack_a, tmp);
 	}
-	data->stack_b = NULL;
+	i = 0;
+	while (argv[++i])
+	{
+		tmp = ft_stacknew(ft_atoi(argv[i]));
+		ft_stackadd_back(&data->copy, tmp);
+	}
 }
-
 
 // // main antiga
 // int	main(int argc, char *argv[])
@@ -53,6 +60,63 @@ void	init_stack(t_data *data, char *argv[])
 // 	}
 // 	printf("\n");
 // }
+void print_data(t_data *data)
+{
+
+	t_stack *aux;
+
+	// printf("linked Norm ");
+	// aux = data->copy;
+	// while(aux)
+	// {
+	// 	printf("%d ", aux->index);
+	// 	aux = aux->next;
+	// }
+	// printf("\n");
+
+	// printf("linked list ");
+	// aux = data->copy;
+	// while(aux)
+	// {
+	// 	printf("%d ", aux->content);
+	// 	aux = aux->next;
+	// }
+	// printf("\n");
+
+	printf("linkedIndex ");
+	aux = data->stack_a;
+	while(aux)
+	{
+		printf("%d ", aux->index);
+		aux = aux->next;
+	}
+	printf("\n");
+
+	printf("linked lstA ");
+	aux = data->stack_a;
+	while(aux)
+	{
+		printf("%d ", aux->content);
+		aux = aux->next;
+	}
+	printf("\n");
+
+	printf("linked lstB ");
+	aux = data->stack_b;
+	while(aux)
+	{
+		printf("%d ", aux->content);
+		aux = aux->next;
+	}
+	printf("\n");
+}
+
+
+
+
+
+
+
 
 int	main(int argc, char *argv[])
 {
@@ -61,51 +125,11 @@ int	main(int argc, char *argv[])
 
 	t_data data;
 
-	// data = (t_data *)malloc(sizeof(t_data *));
-
-
-
 	init_stack(&data, argv);
-	pb(&data);
-	pb(&data);
-	pb(&data);
-	pb(&data);
-	pb(&data);
-	pb(&data);
-	pb(&data);
-	pb(&data);
-	pb(&data);
-	pb(&data);
+	normalize(&data);
 	pb(&data);
 
-	pa(&data);
-	pa(&data);
-	pa(&data);
-	pa(&data);
-	pa(&data);
-	pa(&data);
-	pa(&data);
-	pa(&data);
-	pa(&data);
-	pa(&data);
-	pa(&data);
-
-	printf("linked lstA ");
-	while(data.stack_a)
-	{
-		printf("%d ", data.stack_a->content);
-		data.stack_a = data.stack_a->next;
-	}
-	printf("\n");
-
-	printf("linked lstB ");
-	while(data.stack_b)
-	{
-		printf("%d ", data.stack_b->content);
-		data.stack_b = data.stack_b->next;
-	}
-	printf("\n");
-
-
+	print_data(&data);
 }
+
 

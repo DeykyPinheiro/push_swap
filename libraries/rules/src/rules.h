@@ -6,7 +6,7 @@
 /*   By: demikael <pinheiromikael96@gmail.com>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/05 19:29:39 by demikael          #+#    #+#             */
-/*   Updated: 2022/04/12 23:05:38 by demikael         ###   ########.fr       */
+/*   Updated: 2022/04/13 11:04:50 by demikael         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,8 +19,9 @@
 
 typedef struct s_data
 {
-	t_stack *stack_a;
-	t_stack *stack_b;
+	t_stack	*stack_a;
+	t_stack	*stack_b;
+	t_stack	*copy;
 }	t_data;
 
 
