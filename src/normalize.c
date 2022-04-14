@@ -6,17 +6,17 @@
 /*   By: demikael <pinheiromikael96@gmail.com>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/13 10:27:22 by demikael          #+#    #+#             */
-/*   Updated: 2022/04/13 14:29:07 by demikael         ###   ########.fr       */
+/*   Updated: 2022/04/13 14:56:55 by demikael         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-static int	is_sorted_copy(t_data *data)
+int	is_sorted(t_stack *stack)
 {
 	t_stack	*aux;
 
-	aux = data->copy;
+	aux = stack;
 	while (aux && aux->next)
 	{
 		if ((aux->content > aux->next->content))
@@ -27,7 +27,7 @@ static int	is_sorted_copy(t_data *data)
 	return (1);
 }
 
-static void	bubble_sort_index_copy(t_data *data)
+void	bubble_sort_index_copy(t_data *data)
 {
 
 	int i;
@@ -44,11 +44,11 @@ static void	bubble_sort_index_copy(t_data *data)
 		}
 		aux = aux->next;
 	}
-	if (!is_sorted_copy(data))
+	if (!is_sorted(data->copy))
 		bubble_sort_index_copy(data);
 }
 
-static void	put_index_copy(t_data *data)
+void	put_index_copy(t_data *data)
 {
 	t_stack *aux;
 	int i;
@@ -63,7 +63,7 @@ static void	put_index_copy(t_data *data)
 	}
 }
 
-static void	put_index_a(t_data *data)
+void	put_index_a(t_data *data)
 {
 	t_stack *stack_a;
 	t_stack *copy;
@@ -83,7 +83,7 @@ static void	put_index_a(t_data *data)
 	}
 }
 
-void normalize(t_data *data)
+void	normalize(t_data *data)
 {
 	bubble_sort_index_copy(data);
 	put_index_copy(data);

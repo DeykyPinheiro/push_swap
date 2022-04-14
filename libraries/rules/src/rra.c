@@ -6,7 +6,7 @@
 /*   By: demikael <pinheiromikael96@gmail.com>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/05 19:29:03 by demikael          #+#    #+#             */
-/*   Updated: 2022/04/12 22:42:38 by demikael         ###   ########.fr       */
+/*   Updated: 2022/04/13 19:30:52 by demikael         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,5 +25,5 @@ void	rra(t_data *data)
 		temp->prev = NULL;
 		ft_stackadd_front(&data->stack_a, temp);
 	}
-		write(1, "rra\n", 4);
+	write(1, "rra\n", 4);
 }

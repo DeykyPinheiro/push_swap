@@ -6,7 +6,7 @@
 /*   By: demikael <pinheiromikael96@gmail.com>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/10 16:07:05 by demikael          #+#    #+#             */
-/*   Updated: 2022/04/13 14:30:08 by demikael         ###   ########.fr       */
+/*   Updated: 2022/04/13 15:26:46 by demikael         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,22 +44,6 @@ void	init_stack(t_data *data, char *argv[])
 	}
 }
 
-// // main antiga
-// int	main(int argc, char *argv[])
-// {
-// 	(void)argc;
-// 	t_stack	*stack_a;
-// 	ft_bzero(&stack_a, sizeof(stack_a));
-
-// 	init_stack(&stack_a, argv);
-// 	printf("linked list ");
-// 	while(stack_a)
-// 	{
-// 		printf("%d ", stack_a->content);
-// 		stack_a = stack_a->next;
-// 	}
-// 	printf("\n");
-// }
 void print_data(t_data *data)
 {
 
@@ -114,10 +98,6 @@ void print_data(t_data *data)
 
 
 
-
-
-
-
 int	main(int argc, char *argv[])
 {
 	(void)argc;
@@ -127,7 +107,7 @@ int	main(int argc, char *argv[])
 
 	init_stack(&data, argv);
 	normalize(&data);
-	pb(&data);
+	organize(&data);
 
 	print_data(&data);
 }
