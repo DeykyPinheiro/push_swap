@@ -6,7 +6,7 @@
 /*   By: demikael <pinheiromikael96@gmail.com>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/10 16:07:05 by demikael          #+#    #+#             */
-/*   Updated: 2022/04/14 16:39:09 by demikael         ###   ########.fr       */
+/*   Updated: 2022/04/14 16:55:31 by demikael         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,65 +35,8 @@ void	init_stack(t_data *data, char *argv[])
 	}
 }
 
-
-
-void print_data(t_data *data)
-{
-
-	t_stack *aux;
-
-	// printf("linked Norm ");
-	// aux = data->copy;
-	// while(aux)
-	// {
-	// 	printf("%d ", aux->index);
-	// 	aux = aux->next;
-	// }
-	// printf("\n");
-
-	printf("Index listA ");
-	aux = data->stack_a;
-	while(aux)
-	{
-		printf("%d ", aux->index);
-		aux = aux->next;
-	}
-	printf("\n");
-
-	// printf("linkedIndex ");
-	// aux = data->stack_a;
-	// while(aux)
-	// {
-	// 	printf("%d ", aux->index);
-	// 	aux = aux->next;
-	// }
-	// printf("\n");
-
-	printf("linked lstA ");
-	aux = data->stack_a;
-	while(aux)
-	{
-		printf("%d ", aux->content);
-		aux = aux->next;
-	}
-	printf("\n");
-
-	// printf("linked lstB ");
-	// aux = data->stack_b;
-	// while(aux)
-	// {
-	// 	printf("%d ", aux->content);
-	// 	aux = aux->next;
-	// }
-	// printf("\n");
-}
-
-
-
 int	main(int argc, char *argv[])
 {
 	if (argc > 1)
 		return (start(argc, argv));
 }
-
-

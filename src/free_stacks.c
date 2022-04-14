@@ -6,13 +6,13 @@
 /*   By: demikael <pinheiromikael96@gmail.com>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/14 16:17:55 by demikael          #+#    #+#             */
-/*   Updated: 2022/04/14 16:21:56 by demikael         ###   ########.fr       */
+/*   Updated: 2022/04/14 16:49:21 by demikael         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void free_stacks(t_data *data)
+void	free_stacks(t_data *data)
 {
 	t_stack		*temp;
 
@@ -23,7 +23,6 @@ void free_stacks(t_data *data)
 		data->stack_a = temp;
 	}
 	data->stack_a = NULL;
-
 	while (data->copy)
 	{
 		temp = (data->copy)->next;

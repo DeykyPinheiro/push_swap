@@ -6,7 +6,7 @@
 /*   By: demikael <pinheiromikael96@gmail.com>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/05 19:29:57 by demikael          #+#    #+#             */
-/*   Updated: 2022/04/14 16:38:47 by demikael         ###   ########.fr       */
+/*   Updated: 2022/04/14 16:50:39 by demikael         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,9 +28,5 @@ void	radix(t_data *data);
 int		is_valid_values(char *argv[]);
 void	free_stacks(t_data *data);
 int		start(int argc, char *argv[]);
-
-
-// drogas, lembre de excluir
-void	print_data(t_data *data);
 
 #endif

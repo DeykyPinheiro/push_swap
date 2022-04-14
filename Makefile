@@ -58,7 +58,7 @@ rr:		re
 		clear
 		./$(NAME) 0 1 2 3 4 5 6 7 8 9
 
-v:
-		valgrind --leak-check=full ./$(NAME) 0 1 2 3 4 5 6 7 8 9
+v:		all
+		valgrind --leak-check=full ./$(NAME) -1 2 60 -9 12 23 50
 
 .PHONY: all clean fclean re

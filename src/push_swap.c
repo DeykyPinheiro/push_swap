@@ -6,13 +6,13 @@
 /*   By: demikael <pinheiromikael96@gmail.com>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/14 16:29:33 by demikael          #+#    #+#             */
-/*   Updated: 2022/04/14 16:40:35 by demikael         ###   ########.fr       */
+/*   Updated: 2022/04/14 16:51:45 by demikael         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-int		start(int argc, char *argv[])
+int	start(int argc, char *argv[])
 {
 	t_data	data;
 
