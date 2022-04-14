@@ -6,7 +6,7 @@
 /*   By: demikael <pinheiromikael96@gmail.com>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/14 22:26:20 by demikael          #+#    #+#             */
-/*   Updated: 2022/04/14 15:35:55 by demikael         ###   ########.fr       */
+/*   Updated: 2022/04/14 16:22:24 by demikael         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 long	ft_atoi(const char *nptr)
 {
-	size_t	i;
-	long int		number;
-	int		signal;
+	long int	number;
+	int			signal;
+	size_t		i;
 
 	number = 0;
 	signal = 1;

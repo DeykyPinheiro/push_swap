@@ -6,7 +6,7 @@
 /*   By: demikael <pinheiromikael96@gmail.com>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/10 12:32:29 by demikael          #+#    #+#             */
-/*   Updated: 2022/04/14 01:10:11 by demikael         ###   ########.fr       */
+/*   Updated: 2022/04/14 16:24:37 by demikael         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,9 @@
 
 void	ft_stackrm_front(t_stack **lst)
 {
-	t_stack *aux = *lst;
+	t_stack	*aux;
 
+	aux = *lst;
 	if (*lst == NULL)
 		return ;
 	*lst = aux->next;

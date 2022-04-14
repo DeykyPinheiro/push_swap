@@ -1,26 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_stacknew.c                                      :+:      :+:    :+:   */
+/*   push_swap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: demikael <pinheiromikael96@gmail.com>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/04/09 14:54:28 by demikael          #+#    #+#             */
-/*   Updated: 2022/04/14 16:23:36 by demikael         ###   ########.fr       */
+/*   Created: 2022/04/14 16:29:33 by demikael          #+#    #+#             */
+/*   Updated: 2022/04/14 16:40:35 by demikael         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "stack.h"
+#include "push_swap.h"
 
-t_stack	*ft_stacknew(int content)
+int		start(int argc, char *argv[])
 {
-	t_stack	*element;
+	t_data	data;
 
-	element = (t_stack *)malloc(sizeof(t_stack));
-	if (!element)
-		return (NULL);
-	element->content = content;
-	element->next = NULL;
-	element->prev = NULL;
-	return (element);
+	(void)argc;
+	if (is_valid_values(argv))
+	{
+		init_stack(&data, argv);
+		normalize(&data);
+		organize(&data);
+		free_stacks(&data);
+		return (0);
+	}
+	write(1, "Error\n", 6);
+	return (1);
 }

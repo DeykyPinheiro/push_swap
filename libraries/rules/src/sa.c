@@ -6,7 +6,7 @@
 /*   By: demikael <pinheiromikael96@gmail.com>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/05 19:28:45 by demikael          #+#    #+#             */
-/*   Updated: 2022/04/14 11:29:20 by demikael         ###   ########.fr       */
+/*   Updated: 2022/04/14 16:23:16 by demikael         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,8 +21,6 @@ void	sa(t_data *data)
 		tmp = data->stack_a->next->content;
 		data->stack_a->next->content = data->stack_a->content;
 		data->stack_a->content = tmp;
-
-
 		tmp = data->stack_a->next->index;
 		data->stack_a->next->index = data->stack_a->index;
 		data->stack_a->index = tmp;

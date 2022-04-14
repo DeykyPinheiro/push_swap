@@ -6,7 +6,7 @@
 /*   By: demikael <pinheiromikael96@gmail.com>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/10 13:39:55 by demikael          #+#    #+#             */
-/*   Updated: 2022/04/14 01:10:08 by demikael         ###   ########.fr       */
+/*   Updated: 2022/04/14 16:23:53 by demikael         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,12 @@
 
 void	ft_stackrm_back(t_stack **lst)
 {
-	t_stack *last;
+	t_stack	*last;
 
 	last = ft_stacklst(*lst);
 	if (last == NULL)
 		return ;
-	if(last->prev == NULL)
+	if (last->prev == NULL)
 		(*lst) = last->next;
 	else
 		last->prev->next = NULL;

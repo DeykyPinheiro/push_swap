@@ -6,7 +6,7 @@
 /*   By: demikael <pinheiromikael96@gmail.com>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/10 16:07:05 by demikael          #+#    #+#             */
-/*   Updated: 2022/04/14 16:20:28 by demikael         ###   ########.fr       */
+/*   Updated: 2022/04/14 16:39:09 by demikael         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -92,15 +92,8 @@ void print_data(t_data *data)
 
 int	main(int argc, char *argv[])
 {
-	t_data	data;
-
-	(void)argc;
-
-	// is_valid_values(argv);
-	init_stack(&data, argv);
-	normalize(&data);
-	organize(&data);
-	print_data(&data);
-	free_stacks(&data);
-	// printf("TERMINEI\n");
+	if (argc > 1)
+		return (start(argc, argv));
 }
+
+
