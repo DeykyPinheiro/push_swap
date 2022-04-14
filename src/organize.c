@@ -6,7 +6,7 @@
 /*   By: demikael <pinheiromikael96@gmail.com>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/13 15:17:43 by demikael          #+#    #+#             */
-/*   Updated: 2022/04/13 21:08:38 by demikael         ###   ########.fr       */
+/*   Updated: 2022/04/14 00:25:12 by demikael         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -86,14 +86,13 @@ static void	organize_5(t_data *data)
 
 void	organize(t_data *data)
 {
-	int size_list;
+	int	size_list;
 
 	size_list = ft_stacksize(data->stack_a);
-	if(size_list < 4)
+	if (size_list < 4)
 		organize_3(data);
-	if(size_list < 6)
+	if (size_list < 6)
 		organize_5(data);
-	// else
-	// 	;
-
+	else
+		radix(data);
 }

@@ -1,29 +1,40 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   rrb.c                                              :+:      :+:    :+:   */
+/*   radix.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: demikael <pinheiromikael96@gmail.com>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/04/05 19:28:51 by demikael          #+#    #+#             */
-/*   Updated: 2022/04/14 11:27:51 by demikael         ###   ########.fr       */
+/*   Created: 2022/04/13 21:15:43 by demikael          #+#    #+#             */
+/*   Updated: 2022/04/13 22:52:24 by demikael         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "rules.h"
+#include "push_swap.h"
 
-void	rrb(t_data *data)
+void	radix(t_data *data)
 {
-	t_stack	*temp;
+	int	i;
+	int	j;
+	int	size_a;
+	int	size_b;
 
-	if (data->stack_b && data->stack_b->next)
+	i = 0;
+	size_a = ft_stacksize((data)->stack_a);
+	while (!is_sorted(data->stack_a))
 	{
-		temp = ft_stacklst(data->stack_b);
-		temp->next = data->stack_b;
-		data->stack_b ->prev = temp;
-		temp->prev->next = NULL;
-		temp->prev = NULL;
-		ft_stackadd_front(&data->stack_b, temp);
+		j = 0;
+		while (j < size_a)
+		{
+			if ((data->stack_a->index >> i) & 1)
+				ra(data);
+			else
+				pb(data);
+			j++;
+		}
+		size_b = ft_stacksize(data->stack_b);
+		while ((size_b--))
+			pa(data);
+		i++;
 	}
-	write(1, "rrb\n", 4);
 }

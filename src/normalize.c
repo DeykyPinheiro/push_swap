@@ -6,7 +6,7 @@
 /*   By: demikael <pinheiromikael96@gmail.com>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/13 10:27:22 by demikael          #+#    #+#             */
-/*   Updated: 2022/04/13 14:56:55 by demikael         ###   ########.fr       */
+/*   Updated: 2022/04/14 13:28:23 by demikael         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,9 +29,8 @@ int	is_sorted(t_stack *stack)
 
 void	bubble_sort_index_copy(t_data *data)
 {
-
-	int i;
 	t_stack	*aux;
+	int		i;
 
 	aux = data->copy;
 	while (aux && aux->next)
@@ -50,23 +49,23 @@ void	bubble_sort_index_copy(t_data *data)
 
 void	put_index_copy(t_data *data)
 {
-	t_stack *aux;
-	int i;
+	t_stack	*aux;
+	int		i;
 
 	i = 1;
 	aux = data->copy;
-	while(aux)
+	while (aux)
 	{
 		aux->index = i;
-		 aux = aux->next;
-		 i++;
+		aux = aux->next;
+		i++;
 	}
 }
 
 void	put_index_a(t_data *data)
 {
-	t_stack *stack_a;
-	t_stack *copy;
+	t_stack	*stack_a;
+	t_stack	*copy;
 
 	stack_a = data->stack_a;
 	copy = data->copy;
@@ -74,7 +73,7 @@ void	put_index_a(t_data *data)
 	{
 		if (stack_a->content == copy->content)
 		{
-			stack_a->index= copy->index;
+			stack_a->index = copy->index;
 			stack_a = data->stack_a;
 			copy = copy->next;
 		}

@@ -1,29 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   rrb.c                                              :+:      :+:    :+:   */
+/*   validate.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: demikael <pinheiromikael96@gmail.com>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/04/05 19:28:51 by demikael          #+#    #+#             */
-/*   Updated: 2022/04/14 11:27:51 by demikael         ###   ########.fr       */
+/*   Created: 2022/04/14 12:32:41 by demikael          #+#    #+#             */
+/*   Updated: 2022/04/14 13:48:38 by demikael         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "rules.h"
+#include "push_swap.h"
 
-void	rrb(t_data *data)
+// is_duplicate_values
+// is_int_values
+// is_bigger_max_int
+// is_smaller_min_int
+// imprimir Erro
+
+int	is_valid_values(char *argv[])
 {
-	t_stack	*temp;
-
-	if (data->stack_b && data->stack_b->next)
-	{
-		temp = ft_stacklst(data->stack_b);
-		temp->next = data->stack_b;
-		data->stack_b ->prev = temp;
-		temp->prev->next = NULL;
-		temp->prev = NULL;
-		ft_stackadd_front(&data->stack_b, temp);
-	}
-	write(1, "rrb\n", 4);
+	if ()
+		;
+	else
+		return (1);
 }

@@ -6,7 +6,7 @@
 /*   By: demikael <pinheiromikael96@gmail.com>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/05 19:28:57 by demikael          #+#    #+#             */
-/*   Updated: 2022/04/12 22:36:29 by demikael         ###   ########.fr       */
+/*   Updated: 2022/04/14 11:24:24 by demikael         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ void	ra(t_data *data)
 		tmp = ft_stacklst(data->stack_a);
 		tmp->next = data->stack_a;
 		data->stack_a->prev = tmp;
-		data->stack_a= data->stack_a->next;
+		data->stack_a = data->stack_a->next;
 		tmp->next->next = NULL;
 	}
 	write(1, "ra\n", 3);

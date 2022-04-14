@@ -6,7 +6,7 @@
 /*   By: demikael <pinheiromikael96@gmail.com>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/05 19:28:28 by demikael          #+#    #+#             */
-/*   Updated: 2022/04/13 19:29:19 by demikael         ###   ########.fr       */
+/*   Updated: 2022/04/14 11:21:56 by demikael         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,11 +14,11 @@
 
 void	pa(t_data *data)
 {
-	int i;
+	t_stack	*temp;
 
-	if (data->stack_b)
+	if ((data->stack_b))
 	{
-		i = data->stack_b->content;
+		temp = data->stack_b;
 		if (data->stack_b->next)
 		{
 			data->stack_b = data->stack_b->next;
@@ -26,7 +26,7 @@ void	pa(t_data *data)
 		}
 		else
 			data->stack_b = NULL;
-		ft_stackadd_front(&data->stack_a, ft_stacknew(i));
+		ft_stackadd_front(&data->stack_a, temp);
 	}
 	write(1, "pa\n", 3);
 }
