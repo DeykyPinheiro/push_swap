@@ -1,5 +1,6 @@
+/push_swap_tester
 *.o
 *.a
 *.out
-/push_swap_tester
+push_swap
 checker_linux

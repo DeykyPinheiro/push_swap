@@ -6,7 +6,7 @@
 /*   By: demikael <pinheiromikael96@gmail.com>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/14 22:29:28 by demikael          #+#    #+#             */
-/*   Updated: 2021/09/06 14:48:34 by demikael         ###   ########.fr       */
+/*   Updated: 2022/04/14 15:12:47 by demikael         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ typedef struct s_list
  * @return This function returns the converted integral number as an int value.
  * If no valid conversion could be performed, it returns zero.
  */
-int		ft_atoi(const char *nptr);
+long	ft_atoi(const char *nptr);
 
 /**
  * @brief Checks if the passed character is alphanumeric.

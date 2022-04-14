@@ -6,23 +6,23 @@
 /*   By: demikael <pinheiromikael96@gmail.com>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/14 22:26:20 by demikael          #+#    #+#             */
-/*   Updated: 2022/04/14 12:26:26 by demikael         ###   ########.fr       */
+/*   Updated: 2022/04/14 15:35:55 by demikael         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_atoi(const char *nptr)
+long	ft_atoi(const char *nptr)
 {
 	size_t	i;
-	int		number;
+	long int		number;
 	int		signal;
 
 	number = 0;
+	signal = 1;
 	i = 0;
 	while ((nptr[i] >= '\t' && nptr[i] <= '\r') || nptr[i] == ' ')
 		i++;
-	signal = 1;
 	if (nptr[i] == '+' || nptr[i] == '-')
 	{
 		if (nptr[i] == '-')

@@ -6,7 +6,7 @@
 /*   By: demikael <pinheiromikael96@gmail.com>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/05 19:29:57 by demikael          #+#    #+#             */
-/*   Updated: 2022/04/14 12:39:33 by demikael         ###   ########.fr       */
+/*   Updated: 2022/04/14 15:51:59 by demikael         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ void	normalize(t_data *data);
 void	organize(t_data *data);
 void	radix(t_data *data);
 
-int	is_valid_values(char *argv[]);
+int	is_valid_values(int argc, char *argv[]);
 
 
 

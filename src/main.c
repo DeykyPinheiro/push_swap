@@ -6,7 +6,7 @@
 /*   By: demikael <pinheiromikael96@gmail.com>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/10 16:07:05 by demikael          #+#    #+#             */
-/*   Updated: 2022/04/14 13:28:42 by demikael         ###   ########.fr       */
+/*   Updated: 2022/04/14 15:50:43 by demikael         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -88,16 +88,18 @@ void print_data(t_data *data)
 	// printf("\n");
 }
 
+
+
 int	main(int argc, char *argv[])
 {
 	t_data	data;
 
 	(void)argc;
 
-	printf("IsValid: %d\n", is_valid_values(argv));
+	printf("IsValid: %d\n", is_valid_values(argc, argv));
 	init_stack(&data, argv);
-	normalize(&data);
-	organize(&data);
+	// normalize(&data);
+	// organize(&data);
 	// print_data(&data);
 	// printf("TERMINEI\n");
 }
