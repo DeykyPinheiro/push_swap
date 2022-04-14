@@ -13,7 +13,7 @@ RM		=	rm -rf
 OBJ_DIR = ./obj
 SRC_DIR = ./src
 
-SRC	= main.c normalize.c organize.c radix.c validate.c
+SRC	= main.c normalize.c organize.c radix.c validate.c free_stacks.c
 
 OBJ	=	$(addprefix $(OBJ_DIR)/, $(SRC:.c=.o))
 

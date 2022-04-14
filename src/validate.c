@@ -6,16 +6,12 @@
 /*   By: demikael <pinheiromikael96@gmail.com>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/14 12:32:41 by demikael          #+#    #+#             */
-/*   Updated: 2022/04/14 16:07:53 by demikael         ###   ########.fr       */
+/*   Updated: 2022/04/14 16:17:43 by demikael         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-// is_duplicate_values
-// is_int_values
-// is_bigger_max_int
-// is_smaller_min_int
 // imprimir Erro
 int	is_between_int(long n)
 {
@@ -37,12 +33,11 @@ int	is_int_value(char *str)
 	return (1);
 }
 
-int	is_duplicate_values(int argc, char *argv[])
+int	is_duplicate_values(char *argv[])
 {
 	int	i;
 	int	j;
 
-	(void)argc;
 	i = 0;
 	while(argv[++i])
 	{
@@ -59,7 +54,7 @@ int	is_duplicate_values(int argc, char *argv[])
 
 
 
-int	is_valid_values(int argc, char *argv[])
+int	is_valid_values(char *argv[])
 {
 	int i;
 
@@ -68,20 +63,20 @@ int	is_valid_values(int argc, char *argv[])
 	{
 		if(!is_int_value(argv[i]))
 		{
-			printf("INVALIDO: STRING\n");
+			// printf("INVALIDO: STRING\n");
 			return (0);
 		}
 		else if (!is_between_int(ft_atoi(argv[i])))
 		{
-			printf("INVALIDO: MAX E MIN\n");
+			// printf("INVALIDO: MAX E MIN\n");
 			return (0);
 		}
 	}
-	if(is_duplicate_values(argc, argv))
+	if(is_duplicate_values(argv))
 	{
-		printf("INVALIDO: VALORES DUPLICADOS\n");
+		// printf("INVALIDO: VALORES DUPLICADOS\n");
 		return (0);
 	}
-	printf("valido\n");
+	// printf("valido\n");
 	return (1);
 }
