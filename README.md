@@ -1,4 +1,13 @@
 <h1 align="center">push_swap</h1>
+
+<p align="center">
+ <a href="#objective">Objective</a> •
+ <a href="#rules">Rules</a> •
+ <a href="#how-to-use">How to use</a> •
+ <a href="#results">Results</a> •
+ <a href="#contact-me">Contact me</a>
+</p>
+
 ## Objective
 push swap is a project where you receive a stack of random integers in a list and you have to sort from list A to list B following a series of rules, the idea of the project is to mplement your own sorting algorithm or reuse one that already exists.
 
