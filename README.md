@@ -1,5 +1,5 @@
 <h1 align="center">push_swap</h1>
-
+## Objective
 push swap is a project where you receive a stack of random integers in a list and you have to sort from list A to list B following a series of rules, the idea of the project is to mplement your own sorting algorithm or reuse one that already exists.
 
 ## Rules
@@ -94,3 +94,9 @@ pa
 ## Results
 
 ![alt text](/assets/gif/run.gif)
+
+---
+## Contact me
+Java Developer Jr 💻, Bachelor of Economics (USJT).
+
+[![Gmail Badge](https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white&link=mailto:gabrielpvarandas1995@gmail.com)](mailto:pinheiromikael96@gmail.com) [![LinkdIn Badge](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=whit)](https://www.linkedin.com/in/deyky-pinheiro-bbb735125/)
